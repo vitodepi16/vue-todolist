@@ -48,7 +48,7 @@ createApp({
             this.listSpesa.splice(index, 1)
           },
           completedAction(index){
-            this.listSpesa[index].done = true;
+            this.listSpesa[index].done = !this.listSpesa[index].done;
           }
 
       }
