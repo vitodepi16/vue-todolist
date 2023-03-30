@@ -13,38 +13,38 @@ createApp({
     data() {
         return {
             listSpesa: [{
-              name:  'pane',
-              completed: false
+              text:  'pane',
+              done: false
             },
             {
-              name: 'acqua',
-              completed: false
+              text: 'acqua',
+              done: false
             },
             {
-              name:  'birra',
-              completed: false
+              text:  'birra',
+              done: false
             }
             ],
-            newIngredient:'',
             text:'',
-            completed:'',
         }
       },
       methods: {
           inserisci(){ 
             const newItem = {
-              name : this.newIngredient,
-              complete: false,
+              text : this.text,
+              done: false,
             }
-            this.listSpesa.push(newItem)
+            this.listSpesa.push(newItem);
+            this.text = ''
            
           },
           deleteItem(index){
             this.listSpesa.splice(index, 1)
           },
           completedAction(index){
-            this.listSpesa[index].completed = true;
+            this.listSpesa[index].done = true;
           }
+
       }
       
 }
