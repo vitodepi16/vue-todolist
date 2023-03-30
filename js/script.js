@@ -21,8 +21,12 @@ createApp({
               done: false
             },
             {
-              text:  'birra',
+              text:  'PERONI',
               done: false
+            },
+            {
+                text: 'gelato',
+                done: false
             }
             ],
             text:'',
