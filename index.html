@@ -19,26 +19,26 @@
 <h3>Fai la lista della spesa</h3>
 <p>Hai deciso cosa mangiare a pasquetta? Scrivi qui la tua lista della spesa, cosi da poterla condividere con i tuoi amici e organizzarvi al meglio!</p>
 <div class="">
-    <input type="text" name="ingredient" id="ingredient" v-model="text" @keyup.enter="inserisci">
+    <input type="text" name="ingredient" id="ingredient" v-model="text" @keyup.enter="inserisci" >
     <button @click="inserisci()" class="btn btn-success ms-3">Aggiungi alla lista </button>
-<div class="">
+<div class=" justify-content-start d-flex">
       <ul v-if="listSpesa.length > 0 " >
 
 
         <li v-for="(item, index) in listSpesa" @click="completedAction(index)" :class="item.done ? 'text-decoration-line-through': '' ">
 
-<div class="">
+
     <span>{{item.text}}</span>
             <button @click.stop="deleteItem(index)" class="btn btn-outline-danger ms-3 "><i class="fa-thin fa fa-trash"></i></button>
-</div>
+
             
            
         </li>
     </ul>
 
-  <div class="btn btn-primary">Share</div>
+  
     </div>
-         
+       <div class="btn btn-primary">Share</div>  
 </div>
         </div>
 

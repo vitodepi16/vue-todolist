@@ -30,12 +30,18 @@ createApp({
       },
       methods: {
           inserisci(){ 
-            const newItem = {
-              text : this.text,
-              done: false,
+            if(this.text != ''){
+                const newItem = {
+                    text : this.text,
+                    done: false,
+                  }
+                  
+                  this.listSpesa.push(newItem);
+                  this.text = ''
+            } else{
+                this.done = false
             }
-            this.listSpesa.push(newItem);
-            this.text = ''
+          
            
           },
           deleteItem(index){
